@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content=
+		"width=device-width, initial-scale=1.0">
+	<title>Azul</title>
+
+  <style>
+    .container {
+      width: 70%;
+      margin: auto;
+      text-align: center;
+    }
+
+    .dice {
+      text-align: center;
+      display: inline-block;
+      margin: 10px;
+    }
+
+    body {
+      background-color: #042f4b;
+      margin: 0;
+    }
+
+    h1 {
+      margin: 30px;
+      font-family: "Lobster", cursive;
+      text-shadow: 5px 0 #232931;
+      font-size: 4.5rem;
+      color: #4ecca3;
+      text-align: center;
+    }
+
+    p {
+      font-size: 2rem;
+      color: #4ecca3;
+      font-family: "Indie Flower", cursive;
+    }
+
+    img {
+      width: 100%;
+    }
+
+    .bottom {
+      padding-top: 30px;
+    }
+
+    .butn {
+      background: #4ecca3;
+      font-family: "Indie Flower", cursive;
+      border-radius: 7px;
+      color: #ffff;
+      font-size: 30px;
+      padding: 16px 25px 16px 25px;
+      text-decoration: none;
+    }
+
+    .butn:hover {
+      background: #232931;
+      text-decoration: none;
+    }
+
+    .playingField {
+      display: flex;
+    }
+
+    .shuttlesContainer .planetContainer {
+      width: 50%;
+    }
+
+    .shuttleStorage, .planetSlots, .meteorStorage {
+      display: flex;
+      justify-content: flex-end;
+      margin: 4px;
+    }
+
+    .meteorStorage {
+      justify-content: center;
+    }
+
+    .tile {
+      width: 2em;
+      height: 2em;
+      margin: 4px;
+      border-radius: 4px;
+      background-color: gray;
+    }
+
+    .tile:hover {
+      margin: 3px;
+      border: 1px solid yellow;
+      cursor: pointer;
+    }
+
+    .cities {
+      background-color: #D5503D;
+    }
+
+    .energy {
+      background-color: #DB9B3C;
+    }
+
+    .food {
+      background-color: #F8F5E8;
+    }
+
+    .population {
+      background-color: #CAE0E6;
+    }
+
+    .nature {
+      background-color: #1B7D90;
+    }
+  </style>
+  
+</head>
+
+<body>
+  
+	<div class="container">
+		<h1>Let's Play</h1>
+  <div class="playingField">
+    <div id="shuttlesContainer" class="shuttlesContainer"></div>
+    <div id="planetsContainer" class="planetsContainer"></div>
+  </div>
+  <div id="space" class="space"></div>
+</body>
+
+<script src="./app.js"></script>
+<script src="./src/Tiles.js"></script>
+<script src="./src/shuttlesStorage.js"></script>
+<script src="./src/planetEnv.js"></script>
+<script src="./src/meteorsField.js"></script>
+
+</html>

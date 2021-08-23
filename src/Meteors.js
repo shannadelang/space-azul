@@ -16,20 +16,20 @@ class Meteor {
 function onClick (event) {
   let meteorId = event.path[1].attributes.id.nodeValue // get meteor array it is in
   let tileType = event.path[0].classList[1]
-  console.log(tileType)
   meteorField.forEach(meteor => { // look for all tiles where tile.type == self.type, and set tile.selected = true
     if (meteor.id == meteorId) {
       meteor.tiles.forEach(tile => {
         tile.type == tileType ? tile.selected = true : tile.selected = false
+        metoerSelection = true
       })
+    } else {
+      meteor.tiles.forEach(tile => { tile.selected = false })
     }
   })
   console.log(meteorField[meteorId])
-  // TODO: set a global "meteorSelected" to true
 }
 
-const resouces = solutions.map(item => item.solution)
-const meteorField = []
+let meteorSelection = false
 
 // CREATE DOM OBJECTS
 for(let i = 0; i < 5 ; i++){
@@ -37,7 +37,6 @@ for(let i = 0; i < 5 ; i++){
   myMeteor.fillSlots = resouces
   meteorField.push(myMeteor)
 
-  console.log(myMeteor.tiles, 'meteor')
   let meteorDiv = document.createElement('div')
   meteorDiv.classList.add('meteorStorage')
   meteorDiv.id = myMeteor.id

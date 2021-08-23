@@ -40,5 +40,16 @@ function rollTheDice() {
 }
 
 // Azul rules
+const solutions = [
+  {solution:'cities', solved: false},
+  {solution:'energy', solved: false},
+  {solution:'food', solved: false},
+  {solution:'population', solved: false},
+  {solution:'nature', solved: false}
+]
 
-let inHand = []
+const resouces = solutions.map(item => item.solution)
+
+const solarSystem = []
+const meteorField = []
+const shuttles = []

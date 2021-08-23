@@ -1,11 +1,4 @@
 let planets = []
-let solarSystem = []
-const solutions = [
-  {solution:'cities', solved: false},
-  {solution:'energy', solved: false},
-  {solution:'food', solved: false},
-  {solution:'population', solved: false},
-  {solution:'nature', solved: false}]
 
 for (let i = 0; i < solutions.length; i++) {
   for (let i = 0; i < solutions.length; i++) {
@@ -17,7 +10,7 @@ for (let i = 0; i < solutions.length; i++) {
   planets = [] // reset planet
 }
 
-console.log(solarSystem, 'solar')
+// console.log(solarSystem, 'solar')
 
 solarSystem.forEach( planet => {
   let div = document.createElement('div');

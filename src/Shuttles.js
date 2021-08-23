@@ -1,7 +1,23 @@
-let shuttles = []
-for (let i = 0; i < 5; i++) {
-  shuttles.push({ max: i+1, amount: 0, solution: null})
+class Shuttle {
+  constructor(max) {
+    this.max = max
+    this.tiles = []
+  }
+
+  set fillTiles(max) {
+    for(let i = 0; i < max ; i++){
+      let tile = new Tile(null)
+      this.tiles.push(tile)
+    }
+  }
 }
+
+for (let i = 0; i < 5; i++) {
+  shuttles.push(new Shuttle(i+1))
+  shuttles[i].fillTiles = i+1
+}
+
+console.log(shuttles)
 
 shuttles.forEach( item => {
   let div = document.createElement('div');

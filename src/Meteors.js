@@ -14,22 +14,21 @@ class Meteor {
 }
 
 function onClick (event) {
+  selectedResources.length = 0
   let meteorId = event.path[1].attributes.id.nodeValue // get meteor array it is in
   let tileType = event.path[0].classList[1]
   meteorField.forEach(meteor => { // look for all tiles where tile.type == self.type, and set tile.selected = true
     if (meteor.id == meteorId) {
       meteor.tiles.forEach(tile => {
-        tile.type == tileType ? tile.selected = true : tile.selected = false
-        metoerSelection = true
+        tile.type == tileType
+        ? (tile.selected = true) && (selectedResources.push(tile))
+        : tile.selected = false
       })
     } else {
       meteor.tiles.forEach(tile => { tile.selected = false })
     }
   })
-  console.log(meteorField[meteorId])
 }
-
-let meteorSelection = false
 
 // CREATE DOM OBJECTS
 for(let i = 0; i < 5 ; i++){

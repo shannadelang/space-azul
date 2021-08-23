@@ -10,8 +10,6 @@ for (let i = 0; i < solutions.length; i++) {
   planets = [] // reset planet
 }
 
-// console.log(solarSystem, 'solar')
-
 solarSystem.forEach( planet => {
   let div = document.createElement('div');
   div.classList.add('planetSlots')

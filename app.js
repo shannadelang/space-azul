@@ -52,4 +52,6 @@ const resouces = solutions.map(item => item.solution)
 
 const solarSystem = []
 const meteorField = []
+const selectedResources = []
+const minusStack = []
 const shuttles = []
